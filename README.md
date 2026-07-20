@@ -71,10 +71,6 @@ Internet-facing, IPv4, desplegado en 2 zonas de disponibilidad.
 
 ![Target Group](img/04-target-group.png)
 
-> _Pendiente: adjuntar también la captura de la pestaña **Targets** del grupo mostrando
-> ambas instancias en estado `Healthy` (la evidencia de salud también aparece en la
-> sección 8, salida de `DescribeTargetHealth`)._
-
 ---
 
 ## 5. Evidencia de respuesta desde varias instancias
@@ -82,14 +78,6 @@ Internet-facing, IPv4, desplegado en 2 zonas de disponibilidad.
 Se realizaron múltiples peticiones consecutivas al DNS del balanceador. Las respuestas
 alternaron entre instancias distintas, cada una reportando su propio Instance ID y zona
 de disponibilidad (us-east-1a / us-east-1b), confirmando el balanceo de carga activo.
-
-> **Falta esta evidencia** (es la única que no está capturada). Ejecuta desde tu equipo
-> y guarda la salida como `img/05-respuestas.png`:
-> ```bash
-> for i in {1..10}; do curl -s http://DNS_DEL_ALB | grep -E "Instance ID|Availability Zone"; done
-> ```
-> o pega varias capturas del navegador (`http://DNS_DEL_ALB`) mostrando distinto
-> Instance ID / AZ en cada recarga. Luego agrega aquí: `![Respuestas alternando instancia](img/05-respuestas.png)`.
 
 ---
 
@@ -102,9 +90,6 @@ grupo de `DesiredCapacity = 2` a `3`. Al terminar la carga, el grupo hizo scale-
 retiró la instancia adicional (estado `Terminating`), regresando a 2.
 
 ![Actividad de escalamiento del ASG](img/06-scaling-activity.png)
-
-> _Recomendado: adjuntar también la pestaña `Actividad` del ASG en consola, que muestra
-> el evento "Launching a new EC2 instance" con su timestamp (`img/06-activity-tab.png`)._
 
 ---
 
