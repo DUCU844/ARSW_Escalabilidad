@@ -244,14 +244,3 @@ estructurados y trazas distribuidas para una observabilidad de extremo a extremo
   CloudFormation, para reproducibilidad y control de versiones.
 
 ---
-
-## Rúbrica de referencia
-
-| Criterio | Descripción | Peso |
-|---|---|---|
-| Escalabilidad | Configura un Auto Scaling Group con política de escalamiento. | 25% |
-| Alta disponibilidad | Usa ALB, Target Group y al menos dos zonas de disponibilidad. | 20% |
-| Observabilidad | Analiza métricas relevantes en CloudWatch. | 20% |
-| Prueba de falla | Simula caída de instancia y analiza la recuperación. | 15% |
-| Análisis arquitectónico | Relaciona decisiones con atributos de calidad. | 15% |
-| Limpieza de recursos | Elimina recursos para evitar consumo innecesario. | 5% |
