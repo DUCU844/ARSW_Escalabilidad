@@ -1,7 +1,7 @@
 # Reto Final: Escalabilidad, Alta Disponibilidad y Observabilidad en AWS
 
 **Asignatura:** Arquitecturas de Software
-**Estudiante(s):** Adrián Ducuara _(verifica el nombre; si trabajaron en pareja, añade al compañero)_
+**Estudiante:** Adrián Ducuara
 **Plataforma:** AWS Academy Learner Lab
 **Región:** us-east-1 (N. Virginia)
 **VPC:** vpc-0e558bfc980213581
